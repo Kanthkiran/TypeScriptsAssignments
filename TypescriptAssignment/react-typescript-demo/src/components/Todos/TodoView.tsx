@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import UserStore from "../UserStore";
-type todos = {
+type todoss = {
   id:string;
   name:string;
   isChecked:boolean

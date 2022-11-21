@@ -22,10 +22,7 @@ const Navlist :NavProduct[] = [
     }
 ]
 
-type link ={
-    id:string;
-    Name:string
-}
+
 const Home = observer(()=>{
     const  todoListStore  = UserStore
    
