@@ -1,6 +1,11 @@
 import { observer } from "mobx-react-lite";
 import UserStore from "../UserStore";
-const  TodoView = observer(({ todo }) =>{
+type todos = {
+  id:string;
+  name:string;
+  isChecked:boolean
+}
+const  TodoView = observer(({ todos }:any) =>{
   const  todoListStore  = UserStore;
 
     
@@ -12,11 +17,11 @@ const  TodoView = observer(({ todo }) =>{
           className="toggle"
           type="checkbox"
           onChange={todoListStore.toggle}
-          id={todo.id}
-          checked={todo.isChecked}
+          id={todos.id}
+          checked={todos.isChecked}
         />
-        <label>{todo.name}</label>
-        <button  onClick={() => todoListStore.deleteTodo(todo.id)}>Delete</button>
+        <label>{todos.name}</label>
+        <button  onClick={() => todoListStore.deleteTodo(todos.id)}>Delete</button>
       </div>
       
     </li>

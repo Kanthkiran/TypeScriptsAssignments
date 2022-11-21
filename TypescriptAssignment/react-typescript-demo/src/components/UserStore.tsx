@@ -1,7 +1,7 @@
 import {makeObservable,autorun,observable, action,computed,reaction } from "mobx"
 import React from "react";
 import { v4 as uuid } from 'uuid';
-type UserElemenet = {
+export type UserElemenet = {
   id:string;
   name:string;
   isChecked:boolean

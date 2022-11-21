@@ -3,8 +3,11 @@ import {observer} from 'mobx-react'
 
 import UserStore from "../UserStore";
 import Navbar from "./Navbar";
-
-const Navlist = [
+type NavProduct = {
+    id:string;
+    Name:string
+ }
+const Navlist :NavProduct[] = [
     {
         id:'All',
         Name:"All"
